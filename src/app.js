@@ -11,7 +11,7 @@ const path =require('path')
 const express =require('express')
 const channelizer=require('./utils/imgChannelizer')
 const app = express()
-//var sampleImg=require('./assets/img/Sample1.jpg')
+const port=process.env.PORT||3000
 app.use(express.static(path.join(__dirname,'../public')))
 
 app.get('',(req,res)=>{
@@ -31,6 +31,6 @@ channelsArray.forEach((channel,index)=>{
     })
 })
 
-app.listen(5000,()=>{
+app.listen(port,()=>{
     console.log("Server is up and running")
 })

@@ -14,7 +14,7 @@ window.onload=function(){
     buttons.forEach(button=>{
         button.addEventListener('click', (e) => {
             e.preventDefault()
-            fetch('http://localhost:5000/channels/'+e.target.name).then((response) => {
+            fetch('/channels/'+e.target.name).then((response) => {
                 response.json().then((data) => {
                     if (data.error) {
                     } else {
