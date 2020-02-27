@@ -1,9 +1,9 @@
 const Jimp=require('jimp')
-// const path =require('path')
-// const imgPath=path.join(__dirname,'../assets/Sample1.jpg')
+const path =require('path')
+const imgPath=path.join(__dirname,'../assets/img/Sample1.jpg')
 
 const channelsGetter = (i,callback)=>{
-Jimp.read("/home/harsh/caMicroscope_code_challenge/src/assets/img/Sample1.jpg",(err,img)=>{
+Jimp.read(imgPath,(err,img)=>{
   if(err){
     callback('Unable to channelize image!'+err,undefined);
   }
